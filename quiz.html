@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Javascript Quiz</title>
+<link rel="stylesheet" href="quiz.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+<style>body{ background-color: #eec0c6;
+    background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
+
+
+    background-repeat: no-repeat;
+    background-size: cover;
+  }</style>
+</head>
+<body>
+ 
+<header class="header bg-primary">
+<div class="left-title">Lets quiz</div>
+<div class="right-title">Total Questions: <span id="tque"></span></div>
+<div class="clearfix"></div>
+<div class="dropdown">
+    
+  <div class="dropdown-content">
+    </div>
+</header>
+
+<div class="content">
+<div class="container-fluid">
+<div class="row">
+<div class="col-sm-12">
+<div id="result" class="quiz-body">
+<form name="quizForm" onSubmit="">
+<fieldset class="form-group">
+<h4><span id="qid">1.</span> <span id="question"></span></h4>
+<div class="option-block-container" id="question-options">
+</div> <!-- End of option block -->
+</fieldset>
+<button name="previous" id="previous" class="btn btn-success">Previous</button>
+&nbsp;
+<button name="next" id="next" class="btn btn-success">Next</button>
+</form>
+</div>
+</div> <!-- End of col-sm-12 -->
+</div> <!-- End of row -->
+</div> <!-- ENd of container fluid -->
+</div> <!-- End of content -->
+
+
+
+
+
+
+
+<br><br><br><hr>
+<div class="two">SHARE:
+    </div>
+<a href=https://api.whatsapp.com/send?u=[post-url]&text=[post-share] onclick="window.open(this.href,'targetWindow',
+                               `toolbar=no,
+                                location=no,
+                                status=no,
+                                menubar=no,
+                                scrollbars=yes,
+                                resizable=yes,
+                                width=700,
+                                height=700`);
+return false;"><img src="w.png" alt="" height="70"></a>
+
+
+
+
+
+<a href=https://pinterest.com/pin/create/bookmarklet/?media=[post-img]&url=[post-url]&is_video=[is_video]&description=[post-title]
+  onclick="window.open(this.href,'targetWindow',
+                               `toolbar=no,
+                                location=no,
+                                status=no,
+                                menubar=no,
+                                scrollbars=yes,
+                                resizable=yes,
+                                width=700,
+                                height=700`);
+return false;">
+  <img src="pin2.jpg" alt="" height="60"></a>
+<a href=https://twitter.com/share?url=[post-url]&text=[post-share]&via=[via]&hashtags=[hashtags] onclick="window.open(this.href,'targetWindow',
+                               `toolbar=no,
+                                location=no,
+                                status=no,
+                                menubar=no,
+                                scrollbars=yes,
+                                resizable=yes,
+                                width=700,
+                                height=700`);
+return false;"><img src="tw.png" alt="" height="60"></a>
+<a href=https://www.linkedin.com/shareArticle?url=[post-url]&title=[share] onclick="window.open(this.href,'targetWindow',
+`toolbar=no,
+location=no,
+status=no,
+menubar=no,
+scrollbars=yes,
+resizable=yes,
+width=700,
+height=700`);
+return false;"><img src="lin.png" alt="" height="60"></a></p>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+<script src="quiz.js"></script>
+</body>
+</html>

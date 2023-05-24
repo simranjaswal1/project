@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        box-sizing: border-box;
+    
+    }
+    body{
+        font-family: sans-serif;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        height:100vh;
+        overflow:hidden;
+        margin:0;
+        background-color:#000;
+    }
+    .container{
+        display:flex;
+        width: 600px;
+    
+    
+    }
+    .panel{
+        background-size: auto 100%;
+        background-position:center;
+        background-repeat:no repeat;
+        height:500px;
+        
+        cursor:pointer;
+        color:#fff;
+        flex:0.5;
+        margin:10px;
+        position:relative;
+        transition:flex 0.7s ease-in;
+        -webkit-transition:all 700ms ease-in;
+    
+    }
+    .panel h3{
+        font-size:24px;
+        bottom:20px;
+        left:20px;
+        margin:0;
+        position:absolute;
+        opacity:0;
+    
+    }
+    .panel.active{
+        flex:5;
+    
+    }
+    .panel.active h3{
+        opacity:1;
+        transition:opacity 0.3s ease-in 0.4s;
+    }
+   
+</style></head>
+<body>
+    <div class="container">
+        <div class="panel active" style="background-image: url('sm55.jpg');">
+            
+        </div>
+        <div class="panel" style="background-image: url('sm11.jpg');">
+               </div>
+        <div class="panel" style="background-image: url('sm22.png');">
+            <h3></h3>
+        </div>
+        <div class="panel" style="background-image: url('sm33.jpg');">
+            
+        </div>
+        <div class="panel" style="background-image: url('sm44.jpg') ;">
+            
+        </div>
+        
+    <script>
+document.getElementsByClassName("panel active")[0]
+
+   const panels = document.querySelectorAll(".panel");
+    panels.forEach((panel) => {
+        panel.addEventListener("click",()=>{
+            removeActiveClasses();
+            panel.classList.add("active");
+        });
+    });
+    const removeActiveClasses =() =>{
+        panels.forEach((panel)=>{
+            panel.classList.remove("active");
+        });
+    }
+    </script>
+    </div>
+</body>
+</html>

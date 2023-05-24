@@ -1,0 +1,50 @@
+header{
+    background-image: url("/New.jpg");
+    background-position: top;
+    background-size:cover;
+}
+
+.row{
+    display:flex;
+    justify-content: center;
+
+}
+.row2{
+    display:flex;
+    justify-content: center;
+
+}
+.row3{
+    display:flex;
+    justify-content: center;
+
+}
+.row4{
+    display:flex;
+    justify-content: center;
+
+}
+.row5{
+    display:flex;
+    justify-content: center;
+
+}
+
+h1{
+    font-size:5vmin;
+}
+h2{
+    font-size:5vmin;
+}
+h3{
+    font-size:3vmin;
+}
+
+p{
+    font-size:3vmin;
+    color:whitesmoke;
+}
+p2{
+    font-size:2vmin;
+    color:whitesmoke;
+}

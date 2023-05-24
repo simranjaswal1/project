@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Counter</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;900&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'myfirstfont';
+            src: url('/CoffeeHealingItalic-RpP6o.ttf')
+        }
+    
+        * {
+            font-family: 'myfirstfont';
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Nunito", sans-serif;
+            background: #fbf7f4;
+        }
+
+        .container3 {
+            width: 80%;
+            margin: auto;
+        }
+
+        .heading2 {
+            text-align: center;
+            font-size: 3.5rem;
+            font-weight: bold;
+            padding: 5rem 0;
+        }
+
+        .counter-container1 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .counter1 {
+            text-align: center;
+        }
+
+        .counter1 h3 {
+            padding: 0.5rem 0;
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+
+        .counter1 h6 {
+            font-size: 2rem;
+            padding-bottom: 1rem;
+        }
+
+        .icon {
+            height: 5rem;
+            width: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container3">
+        <div class="heading2">
+        </div>
+        <div class="counter-container1">
+            <div class="counter1">
+                <img src="share.jpg" alt="timer" srcset="" class="icon">
+                <h3 data-target="1000" class="count">0</h3>
+                <h6>Total sharing</h6>
+            </div>
+            <div class="counter1">
+                <img src="eye.jpg" alt="Coffee" srcset="" class="icon">
+                <h3 data-target="1200" class="count">0</h3>
+                <h6>Total view</h6>
+            </div>
+            <div class="counter1">
+                <img src="like.jpg" alt="night" srcset="" class="icon">
+                <h3 data-target="900" class="count">0</h3>
+                <h6>Total Like</h6>
+            </div>
+        </div>
+    </div>
+    <script>
+        const counters = document.querySelectorAll(".count");
+        const speed = 200;
+
+        counters.forEach((counter) => {
+            const updateCount = () => {
+                const target = parseInt(+counter.getAttribute("data-target"));
+                const count = parseInt(+counter.innerText);
+                const increment = Math.trunc(target / speed);
+                console.log(increment);
+
+                if (count < target) {
+                    counter.innerText = count + increment;
+                    setTimeout(updateCount, 1);
+                } else {
+                    count.innerText = target;
+                }
+            };
+            updateCount();
+        });
+
+    </script>
+</body>
+
+</html>
